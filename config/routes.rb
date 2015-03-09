@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
 
-  root 'Songs#index'
+  root 'songs#index'
 end
