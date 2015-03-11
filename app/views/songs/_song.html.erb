@@ -1,0 +1,12 @@
+<div id="song-<%= song.id %>">
+  <h3><%= song.title %></h3>
+  <div><%= song.embed_code.html_safe %></div>
+
+  <%= form_for [song,Like.new] , remote: true do |f| %>
+    <%= f.hidden_field :song, value: song %>
+    <%= f.submit 'like' %>
+  <% end %>
+
+  <span><%= song.likes.count %> people like this</span>
+</div>
+

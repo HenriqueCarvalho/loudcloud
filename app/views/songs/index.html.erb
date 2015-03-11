@@ -1,8 +1,8 @@
 <h1>LoudCloud</h1>
 <h2>There are <%= @songs.count %> sounds</h2>
 
-<% @songs.each do |song| %>
-  <h3><%= song.title %></h3>
-  <h3><%= song.embed_code.html_safe %></h3>
-  <a href=""><%= song.likes.count %> people like this</a>
-<% end %>
+<div class="song-list">
+	<% @songs.each do |song| %>
+	 <%= render song %>
+	<% end %>
+</div>
